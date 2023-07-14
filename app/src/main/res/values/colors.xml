@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="button_login">#F97878</color>
+    <color name="home_hi_name">#203C52</color>
+    <color name="home_hi_message">#B8B6B2</color>
+
 </resources>
