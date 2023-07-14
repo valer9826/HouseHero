@@ -14,3 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "HouseHero"
 include ':app'
+include ':data'
+include ':widget'
+include ':domain'
+include ':common'
