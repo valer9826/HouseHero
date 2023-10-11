@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".ui.home.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -64,7 +64,7 @@
             app:layout_constraintGuide_percent="0.25" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cvHiName"
+            android:id="@+id/cvOnboarding"
             android:layout_width="370dp"
             android:layout_height="120dp"
             android:layout_centerHorizontal="true"
@@ -85,7 +85,7 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/tvOnboarding"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="37dp"
@@ -105,7 +105,7 @@
                     android:textColor="@color/home_hi_message"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6"
+                    app:layout_constraintTop_toBottomOf="@+id/tvOnboarding"
                     app:layout_goneMarginStart="37dp"
                     tools:text="Prepárate para empezar tu día" />
 
@@ -126,7 +126,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.105"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cvHiName" />
+            app:layout_constraintTop_toBottomOf="@+id/cvOnboarding" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvAsignedRooms"

@@ -13,7 +13,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.navigation.findNavController
-import com.proysol.househero.HomeFragment
+import com.proysol.househero.ui.home.HomeFragment
 import com.proysol.househero.databinding.FragmentLoginBinding
 
 import com.proysol.househero.R
@@ -110,7 +110,6 @@ class LoginFragment : Fragment() {
 //                passwordEditText.text.toString()
 //            )
         }
-        val homeFragment = HomeFragment.newInstance("Renato","Julio")
     }
 
     private fun updateUiWithUser(model: LoggedInUserView) {
