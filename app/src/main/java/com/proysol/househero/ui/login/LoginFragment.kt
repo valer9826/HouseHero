@@ -11,11 +11,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ProgressBar
 import android.widget.Toast
-import com.proysol.househero.HomeFragment
+import androidx.navigation.findNavController
+import com.proysol.househero.ui.home.HomeFragment
 import com.proysol.househero.databinding.FragmentLoginBinding
 
 import com.proysol.househero.R
@@ -106,12 +104,12 @@ class LoginFragment : Fragment() {
 
         loginButton.setOnClickListener {
             loadingProgressBar.visibility = View.VISIBLE
-            loginViewModel.login(
-                usernameEditText.text.toString(),
-                passwordEditText.text.toString()
-            )
+            it.findNavController().navigate(R.id.homeFragment)
+//            loginViewModel.login(
+//                usernameEditText.text.toString(),
+//                passwordEditText.text.toString()
+//            )
         }
-        val homeFragment = HomeFragment.newInstance("Renato","Julio")
     }
 
     private fun updateUiWithUser(model: LoggedInUserView) {
