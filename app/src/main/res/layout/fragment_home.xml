@@ -95,7 +95,8 @@
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="Hola, Rocio" />
+                    tools:text="Hola, Rocio"
+                    android:text="Hola, Rocio"/>
 
                 <TextView
                     android:id="@+id/tvGetReady"
@@ -107,7 +108,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvOnboarding"
                     app:layout_goneMarginStart="37dp"
-                    tools:text="Prepárate para empezar tu día" />
+                    tools:text="Prepárate para empezar tu día"
+                    android:text="Prepárate para empezar tu día"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -160,7 +162,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.5"
-                    tools:text="Habitaciones Asignadas" />
+                    tools:text="Habitaciones Asignadas"
+                    android:text="Habitaciones Asignadas"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

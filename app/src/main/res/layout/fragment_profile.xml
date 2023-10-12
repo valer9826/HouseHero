@@ -1,14 +1,384 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.profile.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="238dp"
+                android:padding="5dp"
+                android:text="Rocio Rojas"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Rocio Rojas" />
+
+            <TextView
+                android:id="@+id/tvRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="Personal de limpieza"
+                android:textSize="21sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvName"
+                tools:layout_editor_absoluteY="136dp"
+                tools:text="Personal de limpieza" />
+
+            <TextView
+                android:id="@+id/tvStats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Estadísticas"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.083"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRole"
+                tools:text="Estadísticas" />
+
+            <Button
+                android:id="@+id/btnDay"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="16dp"
+                android:padding="0dp"
+                android:text="Diario"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="6dp"
+                app:elevation="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/btnWeek"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/tvStats"
+                app:layout_constraintTop_toBottomOf="@+id/tvRole" />
+
+
+            <Button
+                android:id="@+id/btnWeek"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:padding="0dp"
+                android:text="Semanal"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="6dp"
+                app:layout_constraintEnd_toStartOf="@+id/btnMonth"
+                app:layout_constraintStart_toEndOf="@+id/btnDay"
+                app:layout_constraintTop_toBottomOf="@+id/tvRole"
+                tools:layout_editor_absoluteY="210dp" />
+
+            <Button
+                android:id="@+id/btnMonth"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="10dp"
+                android:padding="0dp"
+                android:text="Mensual"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnWeek"
+                app:layout_constraintTop_toBottomOf="@+id/tvRole"
+                tools:layout_editor_absoluteY="210dp" />
+
+            <LinearLayout
+                android:id="@+id/linearStats"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStats">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvStatTimeWorked"
+                        android:layout_width="235dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:gravity="left"
+                        android:text="Horas trabajadas"
+                        android:textSize="16sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tvResultTimeWorked"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".2"
+                        android:gravity="center"
+                        android:text="8h"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvStatQualityService"
+                        android:layout_width="235dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".80"
+                        android:gravity="left"
+                        android:text="Calidad de servicio promedio"
+                        android:textSize="16sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tvResultQualityService"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".2"
+                        android:gravity="center"
+                        android:text="Bueno"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvStatAvgTimeExecution"
+                        android:layout_width="235dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:gravity="left"
+                        android:text="Tiempo de ejecución promedio"
+                        android:textSize="16sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tvResultAvgTimeExecution"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".2"
+                        android:gravity="center"
+                        android:text="Medio"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPersonalInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Datos Personales"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.092"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearStats" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvPersonalInfo"
+                style="@style/Widget.Material3.CardView.Elevated"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPersonalInfo">
+
+                <LinearLayout
+                    android:id="@+id/linearPersonalInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Nombres"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".3"
+                            android:text="Rocio Daniela"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Apellidos"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".3"
+                            android:text="Rojas Miranda"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Email"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".3"
+                            android:text="rojas_daniela@gmail.com"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Celular"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".3"
+                            android:text="+51 995450224"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Dirección"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".3"
+                            android:text="Av. Los Jardínes 345"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:text="Modificar"
+                        android:textSize="16sp"
+                        app:cornerRadius="6dp" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Logros"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.065"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cvPersonalInfo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>
