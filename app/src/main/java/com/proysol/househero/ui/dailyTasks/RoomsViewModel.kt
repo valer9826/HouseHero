@@ -14,6 +14,15 @@ class RoomsViewModel : ViewModel(){
         _roomList.value = listOf(
             Room(1,"matrimonial"),
             Room(2,"doble"),
+            Room(3,"simple"),
+            Room(1,"matrimonial"),
+            Room(2,"doble"),
+            Room(3,"simple"),
+            Room(1,"matrimonial"),
+            Room(2,"doble"),
+            Room(3,"simple"),
+            Room(1,"matrimonial"),
+            Room(2,"doble"),
             Room(3,"simple")
         )
     }

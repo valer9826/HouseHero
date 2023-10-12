@@ -29,18 +29,22 @@
                 android:layout_width="20dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
                 android:gravity="center"
+                android:paddingTop="3dp"
                 android:text="107"
-                android:textSize="18sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/tvFloorNumber"
                 android:layout_width="20dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
                 android:gravity="center"
+                android:paddingTop="3dp"
                 android:text="Primer piso"
-                android:textSize="18sp" />
+                android:textSize="12sp" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -48,6 +52,7 @@
                 android:layout_height="30sp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
+                android:src="@drawable/rooms"
                 tools:srcCompat="@tools:sample/avatars" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
