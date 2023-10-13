@@ -57,13 +57,13 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginHorizontal="35dp"
+            android:layout_marginTop="12dp"
             app:cardCornerRadius="20sp"
             app:cardElevation="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.571"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvSeeProfile"
-            android:layout_marginTop="12dp"
             tools:layout_editor_absoluteY="302dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -110,56 +110,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="27dp"
-            android:layout_marginBottom="23dp"
             android:fontFamily="@font/poppins_medium"
             android:text="Pendientes"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/cvAsignedRooms"
+            app:layout_constraintBottom_toTopOf="@+id/rvHomeMenu"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.105"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cvOnboarding" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvAsignedRooms"
-            android:layout_width="0dp"
-            android:layout_height="75dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_marginHorizontal="40dp"
-            app:cardCornerRadius="20sp"
-            app:cardElevation="10dp"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHomeMenu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvToDoRooms">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent">
-
-                <TextView
-                    android:id="@+id/tvAsignedRooms"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="23dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="Habitaciones Asignadas"
-                    android:textColor="@color/home_hi_name"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.5"
-                    tools:text="Habitaciones Asignadas" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.cardview.widget.CardView>
+            app:layout_constraintTop_toBottomOf="@+id/tvToDoRooms"
+            app:layout_constraintVertical_bias="0.0"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_home_menu" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
