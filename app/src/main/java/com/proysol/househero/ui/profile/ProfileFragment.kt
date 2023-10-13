@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.proysol.househero.R
 import com.proysol.househero.databinding.FragmentProfileBinding
 
@@ -20,6 +22,26 @@ class ProfileFragment : Fragment() {
     ): View? {
         _binding = FragmentProfileBinding.inflate(inflater)
         return binding?.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initUI()
+    }
+
+    private fun initUI() {
+        initViews()
+    }
+
+    private fun initViews() {
+        val options = RequestOptions().centerCrop().placeholder(R.drawable.margaret)
+
+        binding?.ivProfilePic?.let {
+            Glide.with(this)
+                .load(R.drawable.margaret)
+                .apply(options)
+                .into(it)
+        }
     }
 
 
