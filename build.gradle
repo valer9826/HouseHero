@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext {
-        navigation_version = '2.7.1'
+        navigation_version = '2.7.5'
         cameraVersion = "1.2.3"
     }
     repositories {
